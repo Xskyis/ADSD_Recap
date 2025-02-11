@@ -22,7 +22,7 @@ public class NilaiAkhir {
         System.out.println("====================");
         System.out.println("====================");
 
-        // Validasi inputan nilai Tgs, Kuis, Uts, Uas harus diantara 0-100
+        // Validasi inputan nilai Tgs, Kuis, Uts, Uas
         if (nilaiTgs >= 0 && nilaiTgs <= 100 && nilaiKuis >= 0 && nilaiKuis <= 100 && nilaiUts >= 0 && nilaiUts <= 100
                 && nilaiUas >= 0 && nilaiUas <= 100) {
             nilaiAkhir = (nilaiTgs * 20 / 100f) + (nilaiKuis * 20 / 100f) + (nilaiUts * 30 / 100f)
