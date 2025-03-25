@@ -12,7 +12,9 @@ public class DataDosenMain03 {
             System.out.println("2. Tampil Data");
             System.out.println("3. Sorting ASC (Usia termuda ke tertua)");
             System.out.println("4. Sorting DSC (Usia tertua ke termuda)");
-            System.out.println("5. Keluar");
+            System.out.println("5. Cari Dosen berdasarkan nama");
+            System.out.println("6. Cari Dosen Berdsarkan Usia");
+            System.out.println("7. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = sc.nextInt();
             sc.nextLine();
@@ -48,12 +50,22 @@ public class DataDosenMain03 {
                     data.tampil();
                     break;
                 case 5:
-                    System.out.println("Keluar dari program...");
+                    System.out.print("Masukkan nama dosen yang dicari: ");
+                    String cariNama = sc.nextLine();
+                    data.PencarianDataSequential03(cariNama);
+                    break;
+                case 6:
+                    System.out.print("Masukkan usia dosen yang dicari: ");
+                    int cariUsia = sc.nextInt();
+                    data.PencarianDataBinary03(cariUsia);
+                    break;
+                case 7:
+                    System.out.println("Program selesai. Terima kasih!");
                     break;
                 default:
                     System.out.println("Pilihan tidak valid! Silakan coba lagi.");
             }
-        } while (pilihan != 5);
+        } while (pilihan != 7);
 
         sc.close();
     }
